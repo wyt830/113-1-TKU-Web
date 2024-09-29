@@ -1,34 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人介紹</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- 網站標題 -->
-    <title>introduction</title>
 </head>
 
 <body>
 
-    <h1>about</h1>
-    <h2>Yu-Tse Wu</h2>
-    <h3>吳侑澤</h3>
-    
-    <h4>興趣</h4>
-    <ul>
-        <li>排球相關事項</li>
-        <li>各式PC遊戲</li>
-        <li>探索未知事項</li>
-    </ul>
-    <h5>個人資訊</h5>
-    <ol>
-        <li>生辰：2004/08/30</li>
-        <li>性別：男</li>
-        <li>星座：室女座</li>
-    </ol>
-    <form action="/submit" method="post">
-        <label for="name"></label>
-        <input type="text" id="name" name="name">
-        <input type="submit" value="提交">
-    </form>
+    <div id="app">
+        <h1>about</h1>
+        <h2>Yu-Tse Wu</h2>
+        <h3>吳侑澤</h3>
+        <div class="card interest">
+            <h4>興趣</h4>
+            <ul>
+                <li>排球相關事項</li>
+                <li>各式PC遊戲</li>
+                <li>探索未知事項</li>
+            </ul>
+        </div>
+
+        <div class="card info">
+            <h5>個人資訊</h5>
+            <table>
+                <tr>
+                    <th>項目</th>
+                    <th>詳細資訊</th>
+                </tr>
+                <tr>
+                    <td>生辰</td>
+                    <td>2004/08/30</td>
+                </tr>
+                <tr>
+                    <td>性別</td>
+                    <td>男</td>
+                </tr>
+                <tr>
+                    <td>星座</td>
+                    <td>處女座</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>411630600@o365.tku.edu.tw</td>
+                </tr>
+            </table>
+        </div>
+
+        <h6>其他</h6>
+        <form action="/submit" method="post">
+            <!-- 新增排球徽章 -->
+            <div class="badge-container">
+                <img src="volleyball-badge.jpg" alt="排球徽章" class="badge">
+            </div>
+            <label for="name">留言</label>
+            <input type="text" id="name" name="name" placeholder="輸入留言">
+            <input type="submit" value="提交">
+        </form>
+
+    </div>
+
+</body>
+
+</html>
